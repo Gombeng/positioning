@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(182, 182, 182);
+  line-height: 1.65;
+  min-height: 200vh;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.container-satu,
+.container-dua,
+.container-tiga,
+.container-empat {
+  width: 90%;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+/* css latihan 1 - kolom */
+.container-satu {
+  border: 3px solid #000;
+  padding: 10px;
+  display: flex;
+}
+.kolom-utama,
+.sidebar-dua,
+.sidebar-satu {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.kolom-utama {
+  flex: 2;
+  /* order: 2; */
+  background-color: tomato;
+}
+
+.sidebar-satu {
+  flex: 0.5;
+  /* order: 1; */
+  background-color: rgb(48, 141, 87);
+}
+
+.sidebar-dua {
+  flex: 1;
+  /* order: 3; */
+  background-color: rgb(122, 116, 212);
+}
+ul li a {
+  color: white;
+  padding: 10px;
+}
+
+/* css latihan 1 - kolom */
+
+/* css latihan 2 - feature */
+.container-dua {
+  display: flex;
+  justify-content: space-between;
+}
+.layanan {
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+}
+
+.layanan.satu {
+  background-color: #a10101;
+}
+
+.layanan.dua {
+  background-color: rgb(22, 129, 0);
+}
+
+.layanan.tiga {
+  background-color: hsla(235, 100%, 27%, 0.473);
+}
+
+/* css latihan 2 - feature */
+
+/* css latihan 3 - thumbnail */
+.container-tiga {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 50%;
+  padding: 10px;
+}
+
+.thumbnail img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* css latihan 3 - thumbnail */
+
+/* reposive */
+@media (min-width: 1000px) /* maksud dari min width adalah saat lebar layar 600++ */ {
+  .thumbnail {
+    width: 33.3%;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+  ul li a {
+    color: white;
+    padding: 10px;
+  }
+}
+@media (max-width: 650px) {
+  /* max width pula kebalikan dari min, jadi ketika layar berukuran 400-- */
+  .thumbnail {
+    width: 100%;
+  }
+  .container-dua {
+    flex-direction: column;
+  }
+  .layanan {
+    width: 100%;
+  }
+
+  .container-satu {
+    flex-direction: column;
+  }
+  .kolom-utama,
+  .sidebar-satu,
+  .sidebar-dua {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .sidebar-satu {
+    display: flex;
+  }
+  h3 {
+    flex: 1;
+  }
+  ul {
+    flex: 3;
+    display: flex;
+    font-size: 14px;
+  }
+}
+
+/* reposive */
